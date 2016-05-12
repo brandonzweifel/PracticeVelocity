@@ -33,7 +33,7 @@ namespace PracticeVelocity.Utilities
         // Calls parent's class method with objects parameters 
         public override List<string> process()
         {
-            return Evaluate(patientInt, diagnoseInt, startInt, endInt, eventName);
+            return evaluate(patientInt, diagnoseInt, startInt, endInt, eventName);
         }
     }
 }
