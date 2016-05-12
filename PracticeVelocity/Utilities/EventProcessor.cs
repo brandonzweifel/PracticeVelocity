@@ -13,6 +13,6 @@ namespace PracticeVelocity.Utilities
     /// </summary>
     public interface EventProcessor
     {
-        List<string> Process();
+        List<string> process();
     }
 }

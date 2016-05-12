@@ -14,10 +14,10 @@ namespace PracticeVelocity.Utilities
     /// as well as required methods from interface made abstract
     /// for subclass to define
     /// </summary>
-    public abstract class AbstractEventProcessor : EventProcessor
+    public abstract class FizzBuzzEventProcessor : EventProcessor
     {
         // Returns list of Fizz Buzz based on patientInt and eventInt
-        public List<string> Evaluate(int patientInt, int eventInt, int startInt, int endInt, string eventName)
+        public List<string> evaluate(int patientInt, int eventInt, int startInt, int endInt, string eventName)
         {
             List<string> result = new List<string>();
 
@@ -47,7 +47,7 @@ namespace PracticeVelocity.Utilities
 
         // inherticance of parent method
         // abstract since it doesn't provide an implementation
-        public abstract List<string> Process();
+        public abstract List<string> process();
 
     } 
 }

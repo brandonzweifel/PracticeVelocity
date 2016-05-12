@@ -30,7 +30,7 @@ namespace PracticeVelocity.Controllers
             if(eventProcessor != null)
             {
                 // Process the Event and add it to the view for use
-                ViewBag.Results = eventProcessor.Process();
+                ViewBag.Results = eventProcessor.process();
             }
             else
             {

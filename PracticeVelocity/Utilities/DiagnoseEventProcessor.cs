@@ -12,7 +12,7 @@ namespace PracticeVelocity.Utilities
     /// extends abstract class AbstactEventProcessor and implements
     /// the interface EventProcessor
     /// </summary>
-    public class DiagnoseEventProcessor : AbstractEventProcessor
+    public class DiagnoseEventProcessor : FizzBuzzEventProcessor
     {
         public int patientInt { get; private set; }     // int divisor to print "Patient"
         public int diagnoseInt { get; private set; }    // int divisor to print "Diagnose"
@@ -31,7 +31,7 @@ namespace PracticeVelocity.Utilities
         }
 
         // Calls parent's class method with objects parameters 
-        public override List<string> Process()
+        public override List<string> process()
         {
             return Evaluate(patientInt, diagnoseInt, startInt, endInt, eventName);
         }

@@ -199,7 +199,7 @@
     </Compile>
     <Compile Include="Utilities\EventProcessorFactory.cs" />
     <Compile Include="Utilities\DiagnoseEventProcessor.cs" />
-    <Compile Include="Utilities\AbstractEventProcessor.cs" />
+    <Compile Include="Utilities\FizzBuzzEventProcessor.cs" />
     <Compile Include="Utilities\EventProcessor.cs" />
     <Compile Include="Utilities\RegisterEventProcessor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
