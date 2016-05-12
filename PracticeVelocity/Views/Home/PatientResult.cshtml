@@ -1,10 +1,20 @@
 ﻿@{
-    ViewBag.Title = "Results from " + ViewBag.Message;
+    ViewBag.Title = ViewBag.Message + " results:";
 }
-<h2>@ViewBag.Title.</h2>
+<h2>@ViewBag.Title</h2>
+@*Loop through results list and print*@
+<ul>
+    @if (ViewBag.Results != null && ViewBag.Results != "")
+    {
+        foreach (var item in ViewBag.Results)
+        {
+            <li>@item</li>
+        }
+    }
+    else
+    {
+        <li>@ViewBag.Error</li>
+    }
 
-@foreach (var item in ViewBag.Results)
-{
-    <p>@item</p>
-}
+</ul>
 

@@ -17,10 +17,12 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
+                @*ActionLink(linkText, actionName, controllerName, routeValues, htmlAttributes)*@
                 @Html.ActionLink("Practice Velocity", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
+                    @*Html.ActionLink(linkText, actionName, controllerName, routeValues, htmlAttributes)*@
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("Register", "PatientResult", "Home", new { eventType = "register" }, new {@class = "" })</li>
                     <li>@Html.ActionLink("Diagnose", "PatientResult", "Home", new { eventType = "diagnose" }, new { @class = "" })</li>

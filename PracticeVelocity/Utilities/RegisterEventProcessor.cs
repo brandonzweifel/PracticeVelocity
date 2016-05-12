@@ -6,14 +6,21 @@ using System.Web;
 
 namespace PracticeVelocity.Utilities
 {
+    /// <summary>
+    /// Register Event Processor
+    /// 
+    /// extends abstract class AbstactEventProcessor and implements
+    /// the interface EventProcessor
+    /// </summary>
     public class RegisterEventProcessor : AbstractEventProcessor
     {
-        public int patientInt { get; private set; }
-        public int registerInt { get; private set; }
-        public int startInt { get; private set; }
-        public int endInt { get; private set; }
-        public string eventName { get; private set; }
+        public int patientInt { get; private set; }     // int divisor to print "Patient"
+        public int registerInt { get; private set; }    // int divisor to print "Register"
+        public int startInt { get; private set; }       // Start int of list
+        public int endInt { get; private set; }         // End int of list
+        public string eventName { get; private set; }   // Name of event
 
+        // Initializes Variables in constructor
         public RegisterEventProcessor()
         {
             patientInt = 5;
@@ -22,6 +29,8 @@ namespace PracticeVelocity.Utilities
             endInt = 100;
             eventName = "Register";
         }
+
+        // Calls parent's class method with objects parameters 
         public override List<string> Process()
         {
             return Evaluate(patientInt, registerInt, startInt, endInt, eventName);

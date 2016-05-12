@@ -7,13 +7,21 @@ using System.Threading.Tasks;
 
 namespace PracticeVelocity.Utilities
 {
+    /// <summary>
+    /// Event Processor abstraction implementing the interface
+    /// 
+    /// Has common method that subclasses will all call
+    /// as well as required methods from interface made abstract
+    /// for subclass to define
+    /// </summary>
     public abstract class AbstractEventProcessor : EventProcessor
     {
-
+        // Returns list of Fizz Buzz based on patientInt and eventInt
         public List<string> Evaluate(int patientInt, int eventInt, int startInt, int endInt, string eventName)
         {
             List<string> result = new List<string>();
 
+            // Loop through numbers to add to list
             for (int i = startInt; i <= endInt; i++)
             {
                 if (i % eventInt == 0 && i % patientInt == 0)
@@ -37,6 +45,8 @@ namespace PracticeVelocity.Utilities
             return result;
         }
 
+        // inherticance of parent method
+        // abstract since it doesn't provide an implementation
         public abstract List<string> Process();
 
     } 
