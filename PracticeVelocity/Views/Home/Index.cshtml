@@ -1,0 +1,12 @@
+﻿@{
+    ViewBag.Title = "Practice Velocity";
+}
+
+<div class="jumbotron">
+    <h1>Coding Problem</h1>
+    <p class="lead">Which event would you like?</p>
+    <p>
+        @Html.ActionLink("Register", "PatientResult", "Home", new { eventType = "register" }, new { @class = "btn btn-primary btn-lg" })
+        @Html.ActionLink("Diagnose", "PatientResult", "Home", new { eventType = "diagnose" }, new { @class = "btn btn-primary btn-lg" })
+    </p>
+</div>

@@ -1,0 +1,10 @@
+﻿@{
+    ViewBag.Title = "Results from " + ViewBag.Message;
+}
+<h2>@ViewBag.Title.</h2>
+
+@foreach (var item in ViewBag.Results)
+{
+    <p>@item</p>
+}
+
