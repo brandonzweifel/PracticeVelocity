@@ -21,6 +21,7 @@ namespace PracticeVelocity.Controllers
         {
             // Add eventType to view
             ViewBag.Message = eventType;
+            ViewBag.Error = "";
 
             // Call factory to create object needed
             EventProcessor eventProcessor = EventProcessorFactory.createFromEvent(eventType);

@@ -2,17 +2,20 @@
     ViewBag.Title = ViewBag.Message + " results:";
 }
 <h2>@ViewBag.Title</h2>
-@*Loop through results list and print*@
+@*Loop through results list*@
 <ul>
-    @if (ViewBag.Results != null && ViewBag.Results != "")
+    @*Check for Errors in event*@
+    @if (ViewBag.Error == "")
     {
         foreach (var item in ViewBag.Results)
         {
+            @*Print each result in list*@
             <li>@item</li>
         }
     }
     else
     {
+        @*Print Errors*@
         <li>@ViewBag.Error</li>
     }
 
