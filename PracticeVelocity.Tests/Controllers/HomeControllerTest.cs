@@ -127,7 +127,7 @@ namespace PracticeVelocity.Tests.Controllers
             // Assert
             Assert.IsNotNull(result);
 
-            Assert.AreEqual("No Results at this time.", result.ViewBag.Results);
+            Assert.AreEqual("No Results at this time.", result.ViewBag.Error);
         }
     }
 }
